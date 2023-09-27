@@ -14,3 +14,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+*::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  background: #fff;
+}
