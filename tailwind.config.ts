@@ -13,6 +13,17 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        saira: ['Saira', 'sans-serif'],
+        rowdies: ['Rowdies', 'cursive'],
+      },
+      colors: {
+        fundoPrincipal: '#141414',
+        textosClaros: '#e0e0e0',
+        vermelhoPrincipal: '#990000',
+        begeSecundario: '#ffa783',
+        cinzaSecundario: '#3a3a3a'
+      },
     },
   },
   plugins: [require("daisyui")],
