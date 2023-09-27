@@ -13,7 +13,7 @@ const Cronometro = () => {
 
   useEffect(() => {
     if (contando) {
-        if (totalSegundos === 10) {
+        if (totalSegundos === 10000000000) {
             alert("O tempo acabou")
             setcontando(false)
         } else {
@@ -45,20 +45,20 @@ const Cronometro = () => {
       </div>
       <div className="flex gap-10">
         {btnPlay &&
-            <IconPlayerPlayFilled size={70} className="bg-cinzaSecundario text-textosClaros p-3 rounded-full cursor-pointer" onClick={() => {
+            <IconPlayerPlayFilled size={70} className="bg-vermelhoPrincipal text-begeSecundario p-3 rounded-full cursor-pointer" onClick={() => {
                 setcontando(true)
                 setbtnPlay(false)
                 setbtnPausa(true)
             }}/>
         }
         {btnPausa &&
-            <IconPlayerPauseFilled size={70} className="bg-cinzaSecundario text-textosClaros p-3 rounded-full cursor-pointer" onClick={() => {
+            <IconPlayerPauseFilled size={70} className="bg-vermelhoPrincipal text-begeSecundario p-3 rounded-full cursor-pointer" onClick={() => {
                 setcontando(false)
                 setbtnPausa(false)
                 setbtnPlay(true)
             }}/>
         }
-        <IconRotateClockwise size={70} className={`bg-cinzaSecundario text-textosClaros p-3 rounded-full ${totalSegundos === 0 ? 'cursor-not-allowed' : 'cursor-pointer'}`} onClick={() => {
+        <IconRotateClockwise size={70} className={`bg-vermelhoPrincipal text-begeSecundario p-3 rounded-full ${totalSegundos === 0 ? 'cursor-not-allowed' : 'cursor-pointer'}`} onClick={() => {
             settotalSegundos(0)
             setcontando(false)
             setbtnPausa(false)
