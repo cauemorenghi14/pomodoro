@@ -1,9 +1,7 @@
 const Home = () => {
-  return ( 
-    <div>
-      
-    </div>
-   );
+    return ( 
+        <div className="h-screen bg-fundoPrincipal"></div>
+     );
 }
  
 export default Home;
