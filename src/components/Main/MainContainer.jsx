@@ -3,10 +3,10 @@ import Sidebar from "./Sidebar";
 
 const MainContainer = ({children}) => {
     return ( 
-        <>
+        <div className="w-screen">
             <Sidebar />
-            <div>{children}</div>
-        </>
+            <div className="w-4/5 ml-auto">{children}</div>
+        </div>
     );
 }
  

@@ -8,7 +8,7 @@ const Sidebar = () => {
   const [btnAtivo, setbtnAtivo] = useState<number>(1);
   
   return (
-    <div className="h-screen bg-fundoPrincipal flex flex-col font-saira fixed left-0 top-0 p-11 justify-between border-r border-cinzaSecundario">
+    <div className="h-screen bg-fundoPrincipal flex flex-col font-saira fixed left-0 top-0 p-11 justify-between border-r border-cinzaSecundario w-1/5">
 
       <div className="flex flex-col items-center">
         <Image src="https://avatars.githubusercontent.com/u/126644843?v=4" width={60} height={60} alt="Imagem do usuário" className="rounded-full"/>
@@ -16,7 +16,7 @@ const Sidebar = () => {
         <p className="text-textosClaros">Developer</p>
       </div>
 
-      <div className="flex flex-col items-left gap-8">
+      <div className="flex flex-col items-left gap-6">
         <button className={`flex items-center gap-3 text-white font-medium ${btnAtivo === 1 ? 'font-medium text-white': 'font-normal'}`} onClick={() => {
           setbtnAtivo(1)
         }}>
@@ -51,6 +51,15 @@ const Sidebar = () => {
                 <IconChecklist />
             </div>
             Tarefas
+        </button>
+
+        <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 5 ? 'font-medium text-white': 'font-normal'}`} onClick={() => {
+          setbtnAtivo(5)
+        }}>
+            <div className={`p-2 rounded-md ${btnAtivo === 5 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
+                <IconChecklist />
+            </div>
+            Sequência
         </button>
       </div>
 
