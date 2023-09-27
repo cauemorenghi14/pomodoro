@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { IconBrain, IconClockHour10, IconHourglassHigh, IconChecklist, IconLogout } from '@tabler/icons-react';
 import {useState} from "react"
+import Link from "next/link";
 
 
 const Sidebar = () => {
@@ -17,50 +18,60 @@ const Sidebar = () => {
       </div>
 
       <div className="flex flex-col items-left gap-6">
-        <button className={`flex items-center gap-3 text-white font-medium ${btnAtivo === 1 ? 'font-medium text-white': 'font-normal'}`} onClick={() => {
-          setbtnAtivo(1)
-        }}>
-            <div className={`rounded-md p-2 ${btnAtivo === 1 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
-                <IconBrain />
-            </div>
-            Projetos
-        </button>
+        <Link href="/projetos" onClick={() => {
+            setbtnAtivo(1)
+          }}>
+          <button className={`flex items-center gap-3 text-white font-medium ${btnAtivo === 1 ? 'font-medium text-white': 'font-normal'}`}>
+              <div className={`rounded-md p-2 ${btnAtivo === 1 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
+                  <IconBrain />
+              </div>
+              Projetos
+          </button>
+        </Link>
 
-        <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 2 ? 'font-medium text-white': 'font-normal'}`} onClick={() => {
-          setbtnAtivo(2)
-        }}>
-            <div className={`rounded-md p-2 ${btnAtivo === 2 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
-                <IconClockHour10 />
-            </div>
-            Timer
-        </button>
+        <Link href="/timer"  onClick={() => {
+            setbtnAtivo(2)
+          }}>
+          <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 2 ? 'font-medium text-white': 'font-normal'}`}>
+              <div className={`rounded-md p-2 ${btnAtivo === 2 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
+                  <IconClockHour10 />
+              </div>
+              Timer
+          </button>
+        </Link>
 
-        <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 3 ? 'font-medium text-white': 'font-normal'}`} onClick={() => {
-          setbtnAtivo(3)
-        }}>
-            <div className={`p-2 rounded-md ${btnAtivo === 3 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
-                <IconHourglassHigh />
-            </div>
-            Cronômetro
-        </button>
+        <Link href="/cronometro" onClick={() => {
+            setbtnAtivo(3)
+          }}>
+          <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 3 ? 'font-medium text-white': 'font-normal'}`}>
+              <div className={`p-2 rounded-md ${btnAtivo === 3 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
+                  <IconHourglassHigh />
+              </div>
+              Cronômetro
+          </button>
+        </Link>
 
-        <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 4 ? 'font-medium text-white': 'font-normal'}`} onClick={() => {
-          setbtnAtivo(4)
-        }}>
-            <div className={`p-2 rounded-md ${btnAtivo === 4 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
-                <IconChecklist />
-            </div>
-            Tarefas
-        </button>
+        <Link href="/tarefas" onClick={() => {
+            setbtnAtivo(4)
+          }}>
+          <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 4 ? 'font-medium text-white': 'font-normal'}`}>
+              <div className={`p-2 rounded-md ${btnAtivo === 4 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
+                  <IconChecklist />
+              </div>
+              Tarefas
+          </button>
+        </Link>
 
-        <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 5 ? 'font-medium text-white': 'font-normal'}`} onClick={() => {
-          setbtnAtivo(5)
-        }}>
-            <div className={`p-2 rounded-md ${btnAtivo === 5 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
-                <IconChecklist />
-            </div>
-            Sequência
-        </button>
+        <Link href="/sequencia" onClick={() => {
+            setbtnAtivo(5)
+          }}>
+          <button className={`flex items-center gap-3 text-textosClaros ${btnAtivo === 5 ? 'font-medium text-white': 'font-normal'}`}>
+              <div className={`p-2 rounded-md ${btnAtivo === 5 ? 'bg-vermelhoPrincipal text-begeSecundario': 'bg-cinzaSecundario text-textosClaros'}`}>
+                  <IconChecklist />
+              </div>
+              Sequência
+          </button>
+        </Link>
       </div>
 
       <div>
