@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import {useContext} from "react"
 import {IconArrowBackUp} from "@tabler/icons-react"
 import Link from "next/link";
+import MediaAproveitamento from "@/components/Sequencia/Mes/Dashboard/MediaAproveitamento";
 
 const PaginaMes = () => {
 
@@ -23,10 +24,13 @@ const PaginaMes = () => {
     }
 
     return ( 
-        <div className="w-full bg-fundoPrincipal flex font-saira flex-col text-textosClaros p-10 h-screen overflow-y-auto">
+        <div className="w-full bg-fundoPrincipal flex gap-7 font-saira flex-col text-textosClaros p-10 h-screen overflow-y-auto">
             <h1 className="text-5xl uppercase font-medium">{mes}</h1>
-            <div className="flex flex-col gap-10">
+            <div className="flex gap-7">
                 <RelatorioHoras relatorios={relatorios} novoRelatorio={novoRelatorio}/>
+                <MediaAproveitamento horas={horasTrabalhadas} possiveis={horasPossiveis}/>
+            </div>
+            <div>
                 <CardPorcentagem horas={horasTrabalhadas} possiveis={horasPossiveis}/>
             </div>
         </div>

@@ -15,7 +15,7 @@ const options = {
       color: "#000",
     },
   },
-  colors: ["#77B6EA", "#98FB98"],
+  colors: ["#e0e0e0", "#161515"], //"#77B6EA", "#98FB98"
   chart: {
     foreColor: "#e1e1e1",
   },

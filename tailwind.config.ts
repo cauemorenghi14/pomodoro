@@ -22,7 +22,9 @@ const config: Config = {
         textosClaros: '#e0e0e0',
         vermelhoPrincipal: '#990000',
         begeSecundario: '#ffa783',
-        cinzaSecundario: '#3a3a3a'
+        cinzaSecundario: '#3a3a3a',
+        horasTrabalhadas: '#77B6EA', //#00A537
+        horasPossiveis: '#FF4646',
       },
     },
   },

@@ -1,4 +1,3 @@
-import Grafico from "./Grafico";
 import ApexChart from "./OutroGrafico";
 
 interface CardPorcentagem {
