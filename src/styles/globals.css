@@ -16,7 +16,14 @@ body {
 }
 
 *::-webkit-scrollbar {
-  width: 5px;
-  border-radius: 10px;
+  width: 4px;
+  background: #fff;
+}
+
+*::-webkit-scrollbar-track {
+  background: #3a3a3a;
+}
+
+*::-webkit-scrollbar-thumb {
   background: #fff;
 }
