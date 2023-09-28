@@ -1,7 +1,7 @@
-import ListaRelatorioHoras from "./ListaRelatoriosHoras";
+import ListaRelatorioHoras from "./RelatorioHoras/ListaRelatoriosHoras";
 import RelatorioHorasModel from "@/models/RelatorioHorasModel";
 import { useState } from "react";
-import InputsRelatorioHoras from "./InputsRelatorioHoras";
+import InputsRelatorioHoras from "./RelatorioHoras/InputsRelatorioHoras";
 
 interface RelatorioHorasProps {
   relatorios: RelatorioHorasModel[];
@@ -9,13 +9,9 @@ interface RelatorioHorasProps {
 }
 
 const RelatorioHoras = (props: RelatorioHorasProps) => {
-  const [dia, setdia] = useState<number>();
-  const [horas, sethoras] = useState<number>();
-  const [possiveis, setpossiveis] = useState<number>();
-  const [id, setid] = useState<number>();
 
   return (
-    <div className="p-3 bg-cinzaSecundario rounded-lg mr-auto overflow-y-auto h-full w-1/3">
+    <div className="p-3 bg-cinzaSecundario rounded-lg mr-auto overflow-y-auto h-96 w-1/2">
       <table className="w-full">
 
         <thead>
@@ -32,19 +28,6 @@ const RelatorioHoras = (props: RelatorioHorasProps) => {
         </tbody>
 
       </table>
-      <button
-        className="bg-fundoPrincipal p-2 mt-2 uppercase hover:bg-vermelhoPrincipal hover:text-begeSecundario hover:font-medium"
-        onClick={() =>
-          props.novoRelatorio({
-            id: id,
-            dia: dia,
-            possiveis: possiveis,
-            horas: horas,
-          })
-        }
-      >
-        Enviar
-      </button>
     </div>
   );
 };
