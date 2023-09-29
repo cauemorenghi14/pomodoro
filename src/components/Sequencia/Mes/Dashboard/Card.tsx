@@ -1,16 +1,17 @@
+import CardComparacaoModel from "@/models/CardComparacaoModel";
 import GraficoComparacao from "./Graficos/GraficoComparacao";
-import ApexChart from "./OutroGrafico";
 
 interface CardPorcentagem {
   horas: number[]
   possiveis: number[]
+  series: CardComparacaoModel[]
 }
 
 const CardPorcentagem = (props: CardPorcentagem) => {
 
   return (
     <div className="w-full bg-cinzaSecundario rounded-lg p-5">
-     <GraficoComparacao horas={props.horas}/>
+     <GraficoComparacao horas={props.horas} series={props.series}/>
     </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
   );
 };

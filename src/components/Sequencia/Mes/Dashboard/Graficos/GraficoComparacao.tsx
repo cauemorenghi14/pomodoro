@@ -1,13 +1,26 @@
 import React, { Component } from "react";
 import dynamic from "next/dynamic";
+import CardComparacaoModel from "@/models/CardComparacaoModel";
 
 interface ApexChartProps {
     horas: number[]
+    series: CardComparacaoModel[]
 }
 
 const ApexChart3 = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-const options = {}
+const options = {
+  chart: {
+    foreColor: '#fff'
+  },
+  xaxis: {
+    labels: {
+      rotate: -45
+    },
+    categories: [],
+    tickPlacement: 'on'
+  },
+}
 
 interface ApexChartState {
   series: {
@@ -169,7 +182,7 @@ class GraficoComparacao extends Component<ApexChartProps, ApexChartState> {
       <div id="chart">
         <ApexChart3
           options={options}
-          series={this.state.series}
+          series={this.props.series}
           type="bar"
           height={350}
         />

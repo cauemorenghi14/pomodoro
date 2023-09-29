@@ -10,19 +10,18 @@ const PaginaMes = () => {
   const router = useRouter();
   const mes = router.query.mes;
 
-
   const { relatorios, setrelatorios } = useContext(UserContext);
-  const mesAtual = String(mes)
+  const mesAtual = String(mes);
   useEffect(() => {
-    fetchMes(mesAtual)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    fetchMes(mesAtual);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mesAtual]);
 
   async function fetchMes(mes: string) {
-    const url = `http://localhost:3333/sequencia/${mes}`
-    const response = await fetch(url)
-    const data = await response.json()
-    setrelatorios(data)
+    const url = `http://localhost:3333/sequencia/${mes}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    setrelatorios(data);
   }
 
   const horasTrabalhadas = relatorios.map((item: any) => item.horas);
@@ -31,6 +30,17 @@ const PaginaMes = () => {
   const novoRelatorio = (relatorio: object) => {
     setrelatorios([...relatorios, relatorio]);
   };
+
+  const series = [
+    {
+      name: "Horas Trabalhadas",
+      data: horasTrabalhadas,
+    },
+    {
+        name: "Horas Possiveis",
+        data: horasPossiveis,
+      },
+  ];
 
   return (
     <div className="w-full bg-fundoPrincipal flex gap-7 font-saira flex-col text-textosClaros p-10 h-screen overflow-y-auto">
@@ -46,7 +56,7 @@ const PaginaMes = () => {
         </div>
       </div>
       <div>
-        <CardPorcentagem horas={horasTrabalhadas} possiveis={horasPossiveis} />
+        <CardPorcentagem horas={horasTrabalhadas} possiveis={horasPossiveis} series={series}/>
       </div>
     </div>
   );
