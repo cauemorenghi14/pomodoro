@@ -11,7 +11,7 @@ const CardPorcentagem = (props: CardPorcentagem) => {
   return (
     <div className="w-full bg-cinzaSecundario rounded-lg p-5">
      <GraficoComparacao horas={props.horas}/>
-    </div>
+    </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
   );
 };
 

@@ -1,4 +1,3 @@
-import { relatoriosHoras } from "@/constants/relatorios";
 import RelatorioHorasModel from "@/models/RelatorioHorasModel";
 import { createContext } from "react";
 import {useState} from "react"
@@ -8,7 +7,7 @@ export default UserContext
 
 export const UserProvider = (props: any) => {
 
-    const [relatorios, setrelatorios] = useState<RelatorioHorasModel[]>(relatoriosHoras);
+    const [relatorios, setrelatorios] = useState<RelatorioHorasModel[]>([]);
 
     return (
         <UserContext.Provider value={{relatorios, setrelatorios}}>
