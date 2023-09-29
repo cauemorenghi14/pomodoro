@@ -11,7 +11,7 @@ interface RelatorioHorasProps {
 const RelatorioHoras = (props: RelatorioHorasProps) => {
 
   return (
-    <div className="p-3 bg-cinzaSecundario rounded-lg mr-auto overflow-y-auto h-96 w-1/2">
+    <div className="p-3 bg-cinzaSecundario rounded-lg mr-auto overflow-y-auto h-full w-1/2">
       <table className="w-full">
 
         <thead>

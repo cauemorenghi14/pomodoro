@@ -21,7 +21,7 @@ const MediaAproveitamento = (props: MediaAproveitamentoProps) => {
     const indiceFinal = parseFloat(indiceAproveitamento.toFixed(2))
 
     return ( 
-        <div className="bg-cinzaSecundario w-1/2 h-1/3 rounded-lg p-3 flex flex-col justify-around">
+        <div className="bg-cinzaSecundario w-full h-1/3 rounded-lg p-3 flex flex-col justify-around">
             <h1 className="uppercase font-semibold bg-fundoPrincipal text-center rounded-md py-1 mb-1">Média de horários</h1>
             <p>Média de <strong className="underline font-semibold">horas trabalhadas</strong> no mês: <strong>{mediaHorasTrabalhadasFinal}</strong></p>
             <p>Média de <strong className="underline font-semibold">horas possíveis</strong> no mês: <strong>{mediaHorasPossiveisFinal}</strong></p>
